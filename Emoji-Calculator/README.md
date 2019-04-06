@@ -16,8 +16,12 @@ $ python3 main.py
 
 After that, you should see the following screen:
 
-<img src="images/image1.png" allign=center/>
+<p align='center'>
+    <img src="images/image1.png"/>
+</p>
 
 Now, all you have to do is calculate!
 
-<img src="images/image2.png" allign=center/>
+<p align='center'>
+    <img src="images/image2.png"/>
+</p>
