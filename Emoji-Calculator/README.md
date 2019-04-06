@@ -16,8 +16,8 @@ $ python3 main.py
 
 After that, you should see the following screen:
 
-![Calculator](images/image1.png)
+<img src="images/image1.png" allign=center/>
 
 Now, all you have to do is calculate!
 
-![Calculator  Running](images/image2.png)
+<img src="images/image2.png" allign=center/>
