@@ -1,0 +1,38 @@
+{
+	"Golang errors": {},
+	"Issues": [
+		{
+			"severity": "HIGH",
+			"confidence": "LOW",
+			"rule_id": "G402",
+			"details": "TLS InsecureSkipVerify may be true.",
+			"file": "/Users/danielcarlier/go/src/github.com/globocom/goreq/client.go",
+			"code": "InsecureSkipVerify: options.Insecure",
+			"line": "83"
+		},
+		{
+			"severity": "LOW",
+			"confidence": "HIGH",
+			"rule_id": "G104",
+			"details": "Errors unhandled.",
+			"file": "/Users/danielcarlier/go/src/github.com/globocom/goreq/client.go",
+			"code": "mergo.Merge(\u0026options, defaultClientOptions)",
+			"line": "59"
+		},
+		{
+			"severity": "LOW",
+			"confidence": "HIGH",
+			"rule_id": "G104",
+			"details": "Errors unhandled.",
+			"file": "/Users/danielcarlier/go/src/github.com/globocom/goreq/goreq.go",
+			"code": "writer.Close()",
+			"line": "272"
+		}
+	],
+	"Stats": {
+		"files": 3,
+		"lines": 576,
+		"nosec": 0,
+		"found": 3
+	}
+}
