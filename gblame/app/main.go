@@ -22,8 +22,14 @@ type Issue struct {
 }
 
 func main() {
-	// Reads the resulting JSON of the static analysis tool
-	file, err := ioutil.ReadFile("results.json")
+	// Verifies if a path to the results file has been provided
+	if len(os.Args) <= 1 {
+		fmt.Println("No path provided")
+		os.Exit(1)
+	}
+
+	// Reads the provided file
+	file, err := ioutil.ReadFile(os.Args[1])
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -43,7 +49,7 @@ func main() {
 	for _, issue := range output.Issues {
 		line := fmt.Sprintf("%s,+1", issue.Line)
 		dir := filepath.Dir(issue.FilePath)
-		command := fmt.Sprintf("cd %s && git blame -L %s %s | awk -F \" \" '{print $2 $3}'\n", dir, line, issue.FilePath)
+		command := fmt.Sprintf("cd %s && git blame -L %s %s | awk -F \" \" '{print $2, $3}' | cut -c 2-\n", dir, line, issue.FilePath)
 
 		f.WriteString(command)
 
